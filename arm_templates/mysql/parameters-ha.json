@@ -1,0 +1,54 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "serverName": {
+            "value": "climberdbha"
+        },
+        "location": {
+            "value": "eastus"
+        },
+        "skuName": {
+            "value": "GP_Gen5_8"
+        },
+        "skuTier": {
+            "value": "GeneralPurpose"
+        },
+        "skuCapacity": {
+            "value": 8
+        },
+        "skuFamily": {
+            "value": "Gen5"
+        },
+        "skuSizeMB": {
+            "value": 5120
+        },
+        "backupRetentionDays": {
+            "value": 14
+        },
+        "geoRedundantBackup": {
+            "value": "Enabled"
+        },
+        "storageAutoGrow": {
+            "value": "Enabled"
+        },
+        "tags": {
+            "value": {}
+        },
+        "infrastructureEncryption": {
+            "value": "Disabled"
+        },
+        "administratorLogin": {
+            "value": "wayneme"
+        },
+        "administratorLoginPassword": {
+            "value": "P@ssw0rd"
+        },
+        "previewFeature": {
+            "value": ""
+        },
+        "version": {
+            "value": "5.7"
+        }
+    }
+}
