@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus2"
+        },
+        "workspaceName": {
+            "value": "crux-ml"
+        },
+        "sku": {
+            "value": "Basic"
+        },
+        "tagValues": {
+            "value": {}
+        },
+        "keyVaultName": {
+            "value": "cruxml7217990179"
+        },
+        "storageAccountName": {
+            "value": "cruxml5431434196"
+        },
+        "applicationInsightsName": {
+            "value": "cruxml1414609550"
+        }
+    }
+}
