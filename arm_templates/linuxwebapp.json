@@ -26,7 +26,7 @@
     },
     "linuxFxVersion": {
       "type": "string",
-      "defaultValue": "DOTNETCORE|3.0",
+      "defaultValue": "PHP|7.4",
       "metadata": {
         "description": "The Runtime stack of current web app"
       }
