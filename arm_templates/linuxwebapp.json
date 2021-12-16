@@ -30,6 +30,14 @@
       "metadata": {
         "description": "The Runtime stack of current web app"
       }
+    },
+    "repoUrl": {
+      "type": "string",
+      "defaultValue": " ",
+      "metadata": {
+        "description": "Optional Git Repo URL"
+      }
+    }
   },
   "variables": {
     "appServicePlanPortalName": "[concat('AppServicePlan-', parameters('webAppName'))]"
