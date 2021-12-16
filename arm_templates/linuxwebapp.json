@@ -81,6 +81,7 @@
               "[resourceId('Microsoft.Web/sites', parameters('webAppName'))]"
             ],
             "properties": {
+              "httpsOnly": true,
               "repoUrl": "[parameters('repoUrl')]",
               "branch": "master",
               "isManualIntegration": true
