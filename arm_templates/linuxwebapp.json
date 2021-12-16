@@ -31,7 +31,14 @@
         "description": "The Runtime stack of current web app"
       }
     },
-    
+    "repoUrl": {
+      "type": "string",
+      "defaultValue": " ",
+      "metadata": {
+        "description": "Optional Git Repo URL"
+      }
+    }
+  },
   "variables": {
     "appServicePlanPortalName": "[concat('AppServicePlan-', parameters('webAppName'))]"
   },
@@ -74,6 +81,7 @@
               "[resourceId('Microsoft.Web/sites', parameters('webAppName'))]"
             ],
             "properties": {
+              "repoUrl": "[parameters('repoUrl')]",
               "branch": "master",
               "isManualIntegration": true
             }
