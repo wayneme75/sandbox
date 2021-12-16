@@ -67,9 +67,9 @@
       ],
       "properties": {
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanPortalName'))]",
+        "httpsOnly": true,
         "siteConfig": {
-          "linuxFxVersion": "[parameters('linuxFxVersion')]",
-          "httpsOnly": true
+          "linuxFxVersion": "[parameters('linuxFxVersion')]"
         },
         "resources": [
           {
