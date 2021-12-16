@@ -32,9 +32,6 @@
       }
     },
     
-      }
-    }
-  },
   "variables": {
     "appServicePlanPortalName": "[concat('AppServicePlan-', parameters('webAppName'))]"
   },
@@ -77,7 +74,6 @@
               "[resourceId('Microsoft.Web/sites', parameters('webAppName'))]"
             ],
             "properties": {
-              "repoUrl": "[parameters('repoUrl')]",
               "branch": "master",
               "isManualIntegration": true
             }
