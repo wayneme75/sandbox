@@ -68,6 +68,7 @@
       "properties": {
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanPortalName'))]",
         "httpsOnly": true,
+        "ftpsState": "disabled",
         "siteConfig": {
           "linuxFxVersion": "[parameters('linuxFxVersion')]"
         },
