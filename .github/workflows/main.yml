@@ -1,0 +1,21 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: AzurePowerShell@5
+  displayName: 'Azure PowerShell script: InlineScript'
+  inputs:
+    azureSubscription: 'the_crux (6a33cf74-b812-40c9-bf79-60fae7b6b21d)'
+    ScriptType: InlineScript
+    Inline: |
+     $id = (Get-AzTemplateSpec -Name storageacct -ResourceGroupName template-spec-rg -Version 1.1).Versions.Id
+     New-AzResourceGroupDeployment -ResourceGroupName tobedeleted-rg -TemplateSpecId $id
+    azurePowerShellVersion: LatestVersion
