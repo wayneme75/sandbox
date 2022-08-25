@@ -3,9 +3,9 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "analyst": {
-        "type": "string",
-        "metadata": {
-          "description": "Analyst name"
+            "type": "string",
+            "metadata": {
+            "description": "Analyst name"
         }
       }
     },
