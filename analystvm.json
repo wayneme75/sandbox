@@ -1,7 +1,14 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {},
+    "parameters": {
+        "analyst": {
+        "type": "string",
+        "metadata": {
+          "description": "Analyst name"
+        }
+      },
+    },
     "variables": {
         "vnetId": "/subscriptions/4f9325d6-6da3-43dd-a846-572fc4347086/resourceGroups/artifactsvr-rg/providers/Microsoft.Network/virtualNetworks/vnet1",
         "vnetName": "[last(split(variables('vnetId'), '/'))]",
