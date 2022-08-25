@@ -7,7 +7,7 @@
         "metadata": {
           "description": "Analyst name"
         }
-      },
+      }
     },
     "variables": {
         "vnetId": "/subscriptions/4f9325d6-6da3-43dd-a846-572fc4347086/resourceGroups/artifactsvr-rg/providers/Microsoft.Network/virtualNetworks/vnet1",
