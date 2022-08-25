@@ -4,8 +4,9 @@
     "parameters": {
         "analyst": {
             "type": "string",
+            "defaultvalue: "wgm001",
             "metadata": {
-            "description": "Analyst name"
+                "description": "Analyst name"
         }
       }
     },
