@@ -37,7 +37,7 @@
             }
         },
         {
-            "name": "[concat('vm-forensics-', variables('unique_string'))]",
+            "name": "[concat('vm-forensics-', parameters('analyst'))]",
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "2021-03-01",
             "location": "usgovvirginia",
