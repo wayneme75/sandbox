@@ -1,15 +1,7 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {
-        "analyst": {
-            "type": "string",
-            "defaultValue": "asf001",
-            "metadata": {
-                "description": "Analyst name"
-        }
-      }
-    },
+    "parameters": {},
     "variables": {
         "vnetId": "/subscriptions/4f9325d6-6da3-43dd-a846-572fc4347086/resourceGroups/artifactsvr-rg/providers/Microsoft.Network/virtualNetworks/vnet1",
         "vnetName": "[last(split(variables('vnetId'), '/'))]",
@@ -38,7 +30,7 @@
             }
         },
         {
-            "name": "[concat('vm-forensics-', parameters('analyst'))]",
+            "name": "[concat('vm-forensics-', variables('unique_string'))]",
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "2021-03-01",
             "location": "usgovvirginia",
