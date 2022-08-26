@@ -18,7 +18,7 @@
     },
     "resources": [
         {
-            "name": "[concat('artifact-win-nic', parameters('analyst'))]",
+            "name": "[concat('artifact-win-nic')]",
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2021-03-01",
             "location": "usgovvirginia",
