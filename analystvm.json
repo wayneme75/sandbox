@@ -4,7 +4,7 @@
     "parameters": {
         "analyst": {
             "type": "string",
-            "defaultvalue": "54321",
+            "defaultvalue": "null",
             "metadata": {
                 "description": "Analyst identifier"
             }
