@@ -38,7 +38,7 @@
             }
         },
         {
-            "name": "[parameters('analystid')]",
+            "name": "5435",
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "2021-03-01",
             "location": "usgovvirginia",
