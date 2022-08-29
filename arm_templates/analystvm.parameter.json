@@ -2,16 +2,8 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "rgName": {
-            "value": "RG01"
-        },
-        "rgLocation": {
-            "value": "eastus"
-        },
-        "tags": {
-            "value": {
-                "CostCenter": "1015"
-            }
-        }
+        "analystid": {
+            "value": "test"
+        }        
     }
 }
