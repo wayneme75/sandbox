@@ -1,23 +1,16 @@
 {
     "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {
-        "analystid": {
-            "type": "string",
-            "defaultvalue": "null",
-            "metadata": {
-                "description": "Analyst identifier"
-            }
-        }
-    },
+    "parameters": {},
     "variables": {
         "vnetId": "/subscriptions/4f9325d6-6da3-43dd-a846-572fc4347086/resourceGroups/artifactsvr-rg/providers/Microsoft.Network/virtualNetworks/vnet1",
         "vnetName": "[last(split(variables('vnetId'), '/'))]",
-        "subnetRef": "[concat(variables('vnetId'), '/subnets/', 'subnet1')]"
+        "subnetRef": "[concat(variables('vnetId'), '/subnets/', 'subnet1')]",
+        "unique_string": "[substring(uniqueString(resourceGroup().id),0,6)]"
     },
     "resources": [
         {
-            "name": "[concat('artifact-win-nic')]",
+            "name": "artifact-win-nic",
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2021-03-01",
             "location": "usgovvirginia",
@@ -37,7 +30,7 @@
             }
         },
         {
-            "name": "[concat('vm-forensics-', parameters('analystid'))]",
+            "name": "[concat('vm-forensics-', variables('unique_string'))]",
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "2021-03-01",
             "location": "usgovvirginia",
