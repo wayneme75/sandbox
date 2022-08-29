@@ -18,7 +18,7 @@
     },
     "resources": [
         {
-            "name": "[parameters('analystid')]",
+            "name": "artifact-win-nic",
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2021-03-01",
             "location": "usgovvirginia",
@@ -43,7 +43,7 @@
             "apiVersion": "2021-03-01",
             "location": "usgovvirginia",
             "dependsOn": [
-                "[concat('Microsoft.Network/networkInterfaces/', parameters('analystid'))]"
+                "[concat('Microsoft.Network/networkInterfaces/', 'artifact-win-nic')]"
             ],
             "properties": {
                 "hardwareProfile": {
@@ -62,7 +62,7 @@
                 "networkProfile": {
                     "networkInterfaces": [
                         {
-                            "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('analystid'))]",
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', 'artifact-win-nic')]",
                             "properties": {
                                 "deleteOption": "Delete"
                             }
