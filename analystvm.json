@@ -17,7 +17,7 @@
     },
     "resources": [
         {
-            "name": "[concat('artifact-win-nic-', parameters('analyst'))]",
+            "name": "[concat('artifact-win-nic-', parameters('analystid'))]",
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2021-03-01",
             "location": "usgovvirginia",
@@ -37,12 +37,12 @@
             }
         },
         {
-            "name": "[concat('vm-forensics-', parameters('analyst'))]",
+            "name": "[concat('vm-forensics-', parameters('analystid'))]",
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "2021-03-01",
             "location": "usgovvirginia",
             "dependsOn": [
-                "[concat('Microsoft.Network/networkInterfaces/', 'artifact-win-nic-', parameters('analyst'))]"
+                "[concat('Microsoft.Network/networkInterfaces/', 'artifact-win-nic-', parameters('analystid'))]"
             ],
             "properties": {
                 "hardwareProfile": {
@@ -61,7 +61,7 @@
                 "networkProfile": {
                     "networkInterfaces": [
                         {
-                            "id": "[resourceId('Microsoft.Network/networkInterfaces', 'artifact-win-nic-', parameters('analyst'))]",
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', 'artifact-win-nic-', parameters('analystid'))]",
                             "properties": {
                                 "deleteOption": "Delete"
                             }
